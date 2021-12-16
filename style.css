@@ -1,0 +1,154 @@
+#header {
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+  margin: 0 auto;
+}
+
+#title {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+#title img {
+   max-height: 3em;
+}
+
+#title h2 {
+  padding-left: 0.5em;
+}
+
+#score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+#tried-times {
+  margin-top: 0;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card {
+  /* 牌外部排版 */
+  flex: 7% 1 1;
+  height: 8vw;
+  border: 2px solid #e0e0e0;
+  margin: 2px;
+  box-sizing: border-box;
+  /* 牌內部排版 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: #D9D0C1;
+}
+
+#end {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(104, 120, 140, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#end-words {
+  padding: 3%;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(242, 238, 179, 0.8);
+  
+}
+
+#end-words h1 {
+  color: #D95F69;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+#end-words h3 {
+  margin: 0;
+  color: #6593A6; 
+}
+
+#play-again-btn {
+  margin-top: 1em;
+  padding: 5px 15px;
+  border: 1px solid #D95F69;
+  border-radius: 5%;
+  background-color: #D95F69;
+  color:white;
+  font-size: 15px;
+}
+
+#end-words h4 {
+  margin: 1em auto;
+  color:#58595B;
+}
+
+/* animation */
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+} 
+
+.end-animation {
+  animation-name: showEnd;
+  animation-duration: 1s;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
+
+
+@keyframes showEnd {
+  from {
+    opacity: 0;
+    width: 0;
+    transform: rotate(180deg);
+  }
+
+  to {
+    opacity: 100;
+    width: 100;
+  }
+}
+
